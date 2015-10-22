@@ -18,10 +18,10 @@ class_TN = zeros(1, 1000)+0;
 class =[class_TP class_TN];
 [n m] = size(Prediction_Scores);
 %Network Learning Rate:
-lr = .01;
+lr = .005;
 %Regularization Parameter (Set to 0 for no regularization)
 reg_param = 0; 
-n_hidden_nodes = 30;
+n_hidden_nodes = 15;
 rng(1);
 W1 = rand(n_hidden_nodes, m);
 W2 = rand(n_hidden_nodes, n_hidden_nodes);
