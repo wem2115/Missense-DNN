@@ -1,17 +1,17 @@
 %% Train a DNN to classify Missense Mutations using the DNN toolbox
 clear all;
-load Training_Data_2o.mat
-load Classes_2o.mat
+load Training_Data.mat
+load Classes_2o_BLOSUM.mat;
 training_data = Prediction_Scores';
 classes = class';
 
-load TS1_2o.mat;
-load TS1class_2o.mat;
+load TS1.mat;
+load TS1class_2o_BLOSUM.mat;
 TS1_data = Prediction_Scores_Test';
 TS1_classes = class';
 
-load TS2_2o.mat;
-load TS2class_2o.mat;
+load TS2.mat;
+load TS2class_2o_BLOSUM.mat;
 TS2_data = Prediction_Scores_Test';
 TS2_classes = class';
 
