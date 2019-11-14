@@ -1,15 +1,12 @@
 %TP Scores are 2 to 14192 = 14191 total training examples
-%Prediction_Scores_TP = xlsread('data.xlsx', 'E2:N14192');
 Prediction_Scores_TP = xlsread('data.xlsx', 'E2:N1001');
 %TN Scores are 14193 to 36193 = 22001 training examples 
 
-%Prediction_Scores_TN = xlsread('data.xlsx', 'E14193:N36193');
 Prediction_Scores_TN = xlsread('data.xlsx', 'E14193:N15192');
 Prediction_Scores = [Prediction_Scores_TP; Prediction_Scores_TN];
 
 %just replace class label with a vector of 1's 
-%class_TP = zeros(1, 14191)+1;
-%class_TN = zeros(1, 22001)+0;
+
 
 class_TP = zeros(1, 1000)+1;
 class_TN = zeros(1, 1000)+0;
@@ -84,17 +81,13 @@ for epoch = 1:nEpochs
     %Check classification accuracy for each epoch for all test sets
 
        Current_correct_1(:,epoch) = validation(W1, W2, W3, 1)';
-     %  Current_correct_2(:,epoch) = validation(W1, W2, W3,2)';
-      %  Current_correct_3(:,epoch) = validation(W1, W2, W3,3)';
+
 
     
 
 
 end
-%     percent_v_regularization(1,y) = max(Current_correct_TS(1,:))
-   % percent_v_regularization(2,y) = max(Current_correct_1(1,:));
-%     percent_v_regularization(3,y) = max(Current_correct_2(1,:));
-%     percent_v_regularization(4,y) = max(Current_correct_3(1,:));
+
 
 
 
